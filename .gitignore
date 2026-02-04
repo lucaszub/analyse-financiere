@@ -99,5 +99,5 @@ pytestdebug.log
 exports/*.csv
 *.export.csv
 
-# Optional: ignorer tous les CSV (décommente si souhaité)
-# *.csv
+# Ignorer tous les CSV (exports Boursorama, etc.)
+*.csv

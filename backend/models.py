@@ -48,11 +48,27 @@ class Transaction(Base):
     
     merchant = Column(String)  # Nom du commerçant
     notes = Column(String)
-    
+
+    # Catégorie parent du CSV Boursorama (ex: "Mouvements internes débiteurs")
+    category_parent_csv = Column(String, nullable=True)
+
     # Pour éviter les doublons lors de l'import CSV
     import_id = Column(String, unique=True, nullable=True)
-    
+
     created_at = Column(DateTime, default=datetime.utcnow)
-    
+
     account = relationship("Account", back_populates="transactions")
     category = relationship("Category", back_populates="transactions")
+
+
+class CategorizationRule(Base):
+    __tablename__ = "categorization_rules"
+
+    id = Column(Integer, primary_key=True, index=True)
+    keyword = Column(String, nullable=False)
+    category_id = Column(Integer, ForeignKey("categories.id"), nullable=False)
+    match_field = Column(String, default="description")  # "description" ou "merchant"
+    is_active = Column(Boolean, default=True)
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+    category = relationship("Category")
