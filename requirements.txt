@@ -1,0 +1,7 @@
+pandas 
+streamlit
+streamlit_dynamic_filters
+altair
+plotly
+fastapi[standard]
+sqlalchemy[asyncio]

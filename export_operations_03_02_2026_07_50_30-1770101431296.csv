@@ -1,0 +1,55 @@
+﻿dateOp;dateVal;label;category;categoryParent;supplierFound;amount;comment;accountNum;accountLabel;accountbalance
+2026-02-02;2026-02-02;"VIR INST JEAN BAPTISTE DEMAY YACOUMAS";"Virements émis";"Virements émis";"jean baptiste demay yacoumas";-383,00;;00040575066;BoursoBank;252.6
+2026-02-02;2026-02-02;"CARTE 30/01/26 KCRC VIA SILVA CB*9069";"Vêtements et accessoires";"Vie quotidienne";"kcrc via silva";-300,00;;00040575066;BoursoBank;252.6
+2026-02-02;2026-02-02;"CARTE 30/01/26 NYX*MELCHIOR CB*9069";"Hébergement (hôtels, camping…)";"Voyages & Transports";"nyx melchior";-2,90;;00040575066;BoursoBank;252.6
+2026-02-02;2026-02-02;"CARTE 31/01/26 INTERMARCHE DAC CB*9069";Carburant;"Auto & Moto";intermarche;-20,31;;00040575066;BoursoBank;252.6
+2026-01-30;2026-01-30;"CARTE 29/01/26 SUPER U 9 CB*9069";Alimentation;"Vie quotidienne";"super u";-30,17;;00040575066;BoursoBank;958.81
+2026-01-30;2026-01-30;"VIR INST AZILIE LEMONNIER";"Virements émis";"Virements émis";"azilie lemonnier";-200,00;;00040575066;BoursoBank;958.81
+2026-01-29;2026-01-29;"VIR M ZUBIARRAIN LUCAS";"Virements émis de comptes à comptes";"Mouvements internes débiteurs";"virement m zubiarrain lucas";-600,00;;00040575066;BoursoBank;1188.98
+2026-01-29;2026-01-29;"CARTE 28/01/26 NORAUTO 260 PSC 4 CB*9069";"Entretien - Réparation";"Auto & Moto";norauto;-33,89;;00040575066;BoursoBank;1188.98
+2026-01-29;2026-01-29;"CARTE 27/01/26 CUIVRE ROUGE CO04 CB*9069";"Bien-être et soins (coiffeur, parfums…)";"Vie quotidienne";"cuivre rouge";-26,00;;00040575066;BoursoBank;1188.98
+2026-01-29;2026-01-29;"VIR SEPA CGI FRANCE S.A.S.";"Virements reçus";"Virements reçus";"virement cgi france";"1 883,92";;00040575066;BoursoBank;1188.98
+2026-01-28;2026-01-28;"VIR Virement depuis LIVRET D'EPARGNE";"Dépenses d'épargne - Autres";"Dépenses d'épargne";"virement depuis livret d epargne";10,00;;00040575066;BoursoBank;-35.05
+2026-01-28;2026-01-28;"VIR Virement depuis LIVRET D'EPARGNE";"Dépenses d'épargne - Autres";"Dépenses d'épargne";"virement depuis livret d epargne";13,00;;00040575066;BoursoBank;-35.05
+2026-01-28;2026-01-28;"VIR INST M ZUBIARRAIN LUCAS";"Virements reçus";"Virements reçus";"m zubiarrain lucas";6,53;;00040575066;BoursoBank;-35.05
+2026-01-26;2026-01-26;"VIR INST M SEBASTIEN BOUCHE";"Virements reçus";"Virements reçus";"m sebastien bouche";17,48;;00040575066;BoursoBank;-64.58
+2026-01-26;2026-01-26;"CARTE 24/01/26 SUPER U 9 CB*9069";Alimentation;"Vie quotidienne";"super u";-42,85;;00040575066;BoursoBank;-64.58
+2026-01-26;2026-01-26;"CARTE 23/01/26 Google One CB*9069";"Electronique et informatique";"Vie quotidienne";google;-1,99;;00040575066;BoursoBank;-64.58
+2026-01-26;2026-01-24;"VIR INST M ZUBIARRAIN LUCAS";"Virements reçus";"Virements reçus";"m zubiarrain lucas";30,00;;00040575066;BoursoBank;-37.22
+2026-01-26;2026-01-26;"VIR Virement depuis BoursoBank";"Virements émis de comptes à comptes";"Mouvements internes débiteurs";"virement depuis boursobank";-283,00;;00040575066;BoursoBank;-64.58
+2026-01-26;2026-01-24;"VIR INST M ZUBIARRAIN LUCAS";"Virements reçus";"Virements reçus";"m zubiarrain lucas";283,00;;00040575066;BoursoBank;-37.22
+2026-01-26;2026-01-26;"VIR CREATION COMPTE";"Virements émis de comptes à comptes";"Mouvements internes débiteurs";"virement creation compte";-30,00;;00040575066;BoursoBank;-64.58
+2026-01-21;2026-01-21;"VIR INST M. JEAN-BAPTISTE DEMAY";"Virements reçus";"Virements reçus";"m jean baptiste demay";39,95;;00040575066;BoursoBank;-37.22
+2026-01-19;2026-01-19;"CARTE 17/01/26 BOULANGERIE MIRA CB*9069";Alimentation;"Vie quotidienne";"boulangerie mir";-3,80;;00040575066;BoursoBank;-77.17
+2026-01-16;2026-01-16;"CARTE 15/01/26 CLAUDE.AI SUBSCRI CB*9069";"Non catégorisé";"Non catégorisé";"CLAUDE.AI SUBSCRIPTION";-21,60;;00040575066;BoursoBank;-73.37
+2026-01-16;2026-01-16;"CARTE 15/01/26 NYX*MELCHIOR CB*9069";"Hébergement (hôtels, camping…)";"Voyages & Transports";"nyx melchior";-5,30;;00040575066;BoursoBank;-73.37
+2026-01-15;2026-01-15;"CARTE 14/01/26 NYX*MELCHIOR CB*9069";"Hébergement (hôtels, camping…)";"Voyages & Transports";"nyx melchior";-5,30;;00040575066;BoursoBank;-46.47
+2026-01-15;2026-01-15;"VIR VIREMENT CREATION COMPTE";"Virements émis";"Virements émis";"virement creation compte";-11,00;;00040575066;BoursoBank;-46.47
+2026-01-14;2026-01-14;"CARTE 13/01/26 SUPER U 9 CB*9069";Alimentation;"Vie quotidienne";"super u";-10,52;;00040575066;BoursoBank;-30.17
+2026-01-14;2026-01-14;"CARTE 13/01/26 NYX*MELCHIOR CB*9069";"Hébergement (hôtels, camping…)";"Voyages & Transports";"nyx melchior";-2,90;;00040575066;BoursoBank;-30.17
+2026-01-13;2026-01-13;"CARTE 12/01/26 NYX*MELCHIOR CB*9069";"Hébergement (hôtels, camping…)";"Voyages & Transports";"nyx melchior";-2,90;;00040575066;BoursoBank;-16.75
+2026-01-13;2026-01-13;"CARTE 12/01/26 KEOLIS RENNES CB*9069";"Transports quotidiens (métro, bus…)";"Voyages & Transports";"keolis rennes";-1,70;;00040575066;BoursoBank;-16.75
+2026-01-13;2026-01-13;"VIR INST FELICIEN";"Virements émis";"Virements émis";felicien;-50,00;;00040575066;BoursoBank;-16.75
+2026-01-12;2026-01-12;"CARTE 10/01/26 SUPER U 9 CB*9069";Alimentation;"Vie quotidienne";"super u";-16,00;;00040575066;BoursoBank;37.85
+2026-01-12;2026-01-12;"CARTE 09/01/26 STAR L'APPLI CB*9069";"Transports quotidiens (métro, bus…)";"Voyages & Transports";"star l appli";-52,95;;00040575066;BoursoBank;37.85
+2026-01-12;2026-01-12;"CARTE 09/01/26 LA PISTE CB*9069";"Restaurants, bars, discothèques…";"Loisirs et sorties";"la piste";-8,00;;00040575066;BoursoBank;37.85
+2026-01-12;2026-01-12;"CARTE 09/01/26 SCARABEE CESSON CB*9069";Alimentation;"Vie quotidienne";"scarabee cesson";-19,90;;00040575066;BoursoBank;37.85
+2026-01-12;2026-01-12;"CARTE 09/01/26 Microsoft-G134177 CB*9069";"Multimedia à domicile (TV, internet, téléphonie…)";"Abonnements & téléphonie";"west born";-5,47;;00040575066;BoursoBank;37.85
+2026-01-12;2026-01-12;"CARTE 09/01/26 MICROSOFTÑG134449 CB*9069";"Non catégorisé";"Non catégorisé";MICROSOFTÑG134449249;-3,37;;00040575066;BoursoBank;37.85
+2026-01-12;2026-01-12;"CARTE 11/01/26 KING MARKET CB*9069";Alimentation;"Vie quotidienne";"king market";-28,03;;00040575066;BoursoBank;37.85
+2026-01-12;2026-01-12;"CARTE 11/01/26 FRESH 4 CB*9069";"Restaurants, bars, discothèques…";"Loisirs et sorties";fresh;-35,80;;00040575066;BoursoBank;37.85
+2026-01-12;2026-01-12;"CARTE 11/01/26 SUPER U 9 CB*9069";Alimentation;"Vie quotidienne";"super u";-57,41;;00040575066;BoursoBank;37.85
+2026-01-12;2026-01-10;"VIR INST ZUBIARRAIN LUCAS";"Virements émis";"Virements émis";"zubiarrain lucas";-15,00;;00040575066;BoursoBank;279.78
+2026-01-09;2026-01-09;"CARTE 08/01/26 NYX*MELCHIOR CB*9069";"Hébergement (hôtels, camping…)";"Voyages & Transports";"nyx melchior";-9,30;;00040575066;BoursoBank;279.78
+2026-01-09;2026-01-09;"CARTE 08/01/26 NYX*MELCHIOR CB*9069";"Hébergement (hôtels, camping…)";"Voyages & Transports";"nyx melchior";-1,50;;00040575066;BoursoBank;279.78
+2026-01-09;2026-01-09;"VIR INST M ZUBIARRAIN LUCAS";"Virements reçus";"Virements reçus";"m zubiarrain lucas";300,00;;00040575066;BoursoBank;279.78
+2026-01-08;2026-01-08;"CARTE 07/01/26 NYX*MELCHIOR CB*9069";"Hébergement (hôtels, camping…)";"Voyages & Transports";"nyx melchior";-2,50;;00040575066;BoursoBank;-9.42
+2026-01-08;2026-01-08;"CARTE 07/01/26 NYX*MELCHIOR CB*9069";"Hébergement (hôtels, camping…)";"Voyages & Transports";"nyx melchior";-7,90;;00040575066;BoursoBank;-9.42
+2026-01-07;2026-01-07;"*FRAIS BOURSO PROTECT MONO 01/2026";"Frais bancaires et de gestion (dont agios)";"Services financiers & professionnels";"Boursorama Banque";-0,99;;00040575066;BoursoBank;0.98
+2026-01-05;2026-01-05;"VIR Virement de Nathalie ZUBIARRAIN";"Virements reçus";"Virements reçus";"virement de nathalie zubiarrain";100,00;;00040575066;BoursoBank;1.97
+2025-12-16;2025-12-16;"VIR INST ZUBIARRAIN LUCAS";"Virements émis";"Virements émis";"zubiarrain lucas";-412,00;;00040575066;BoursoBank;-98.03
+2025-12-15;2025-12-15;"CARTE 12/12/25 Microsoft-G128600 CB*9069";"Multimedia à domicile (TV, internet, téléphonie…)";"Abonnements & téléphonie";"west born";-3,34;;00040575066;BoursoBank;313.97
+2025-12-15;2025-12-14;"VIR Virement de Nathalie ZUBIARRAIN";"Virements reçus";"Virements reçus";"virement de nathalie zubiarrain";400,00;;00040575066;BoursoBank;-82.69
+2025-12-10;2025-12-10;"CARTE 09/12/25 Microsoft-G128992 CB*9069";"Multimedia à domicile (TV, internet, téléphonie…)";"Abonnements & téléphonie";"west born";-5,24;;00040575066;BoursoBank;-82.69
+2025-12-09;2025-12-09;"VIR INST M ZUBIARRAIN LUCAS";"Virements reçus";"Virements reçus";"m zubiarrain lucas";20,00;;00040575066;BoursoBank;-77.45
+2025-12-05;2025-12-05;"*FRAIS BOURSO PROTECT MONO 12/2025";"Frais bancaires et de gestion (dont agios)";"Services financiers & professionnels";"Boursorama Banque";-0,99;;00040575066;BoursoBank;-97.45

@@ -1,0 +1,103 @@
+__packach__/
+
+venv/// ...existing code...
+__packach__/
+venv/
+{ changed code }
+// ...existing code...
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+pip-wheel-metadata/
+share/python-wheels/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+
+# VS Code
+.vscode/
+.vscode/*
+
+# Pytest
+.cache/
+.pytest_cache/
+
+# Coverage
+.coverage
+.coverage.*
+.cache
+coverage.xml
+htmlcov/
+
+# MyPy
+.mypy_cache/
+
+# Logs and sqlite
+*.log
+*.sqlite3
+*.db
+
+# Environment and secrets
+.env
+.env.*.local
+secrets.json
+
+# Static/media generated
+staticfiles/
+media/
+
+# Docker
+docker-compose.override.yml
+Dockerfile*
+
+# IDE / Editor directories and files
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Python build artifacts
+*.pyc
+*.pyo
+*.pyd
+
+# Test output
+nosetests.xml
+coverage.xml
+pytestdebug.log
+
+# Exported CSVs (ignorer les exports)
+# règle générale pour dossier exports/ et fichiers nommés *.export.csv
+exports/*.csv
+*.export.csv
+
+# Optional: ignorer tous les CSV (décommente si souhaité)
+# *.csv

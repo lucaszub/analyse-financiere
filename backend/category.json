@@ -1,0 +1,155 @@
+{
+    "CatégoriesPrincipales": {
+        "BesoinsEssentiels": {
+            "Logement": [
+                "Loyer",
+                "Hypothèque",
+                "Charges locatives",
+                "Assurance habitation"
+            ],
+            "Alimentation": [
+                "Épicerie",
+                "Courses supermarché",
+                "Repas à domicile"
+            ],
+            "Santé": [
+                "Pharmacie",
+                "Médecin",
+                "Optique",
+                "Dentiste"
+            ],
+            "ServicesPublics": [
+                "Électricité",
+                "Eau",
+                "Gaz",
+                "Internet",
+                "Téléphone"
+            ]
+        },
+        "Transport": {
+            "Auto": [
+                "Carburant",
+                "Entretien auto",
+                "Assurance auto",
+                "Péages"
+            ],
+            "TransportsPublics": [
+                "Bus",
+                "Train",
+                "Métro",
+                "Tramway",
+                "VTC"
+            ]
+        },
+        "LoisirsDivertissement": {
+            "Sorties": [
+                "Cinéma",
+                "Concerts",
+                "Spectacles"
+            ],
+            "VacancesVoyages": [
+                "Hôtel",
+                "Billets d'avion",
+                "Location de vacances"
+            ],
+            "AbonnementsLoisirs": [
+                "Plateformes de streaming",
+                "Jeux",
+                "Magazines"
+            ],
+            "Sport": [
+                "Salle de sport",
+                "Équipement sportif",
+                "Cours et activités"
+            ]
+        },
+        "AlimentationBoissons": {
+            "RestaurantsBars": [
+                "Restaurant",
+                "Bar",
+                "Café"
+            ],
+            "Livraisons": [
+                "Livraison de repas",
+                "Plateformes food"
+            ]
+        },
+        "AbonnementsFactures": {
+            "AbonnementsDigitaux": [
+                "Streaming",
+                "Cloud",
+                "Apps"
+            ],
+            "FacturesMensuelles": [
+                "Abonnement téléphone",
+                "Abonnement Internet",
+                "TV"
+            ]
+        },
+        "Virements": {
+            "EntreComptes": [
+                "Virement interne",
+                "Transfert entre comptes"
+            ],
+            "VersÉpargne": [
+                "Virement vers compte épargne"
+            ]
+        },
+        "Revenus": {
+            "Salaire": [
+                "Salaire net",
+                "Bonus"
+            ],
+            "RevenusPassifs": [
+                "Dividendes",
+                "Intérêts"
+            ]
+        },
+        "ÉpargneInvestissement": {
+            "Investissement": [
+                "Actions",
+                "Crypto",
+                "ETF"
+            ],
+            "Épargne": [
+                "Assurance vie",
+                "PEL",
+                "Livret"
+            ]
+        },
+        "SantéAssurance": {
+            "AssuranceSanté": [
+                "Mutuelle",
+                "Assurance santé"
+            ],
+            "DépensesSanté": [
+                "Soins",
+                "Médicaments"
+            ]
+        },
+        "ImpôtsTaxes": {
+            "Impôts": [
+                "Impôt sur le revenu",
+                "Taxe foncière",
+                "Taxe d'habitation"
+            ]
+        },
+        "DépensesProfessionnelles": {
+            "FraisPro": [
+                "Déplacements pro",
+                "Matériel pro"
+            ]
+        },
+        "Autres": {
+            "FraisBancaires": [
+                "Frais de tenue de compte",
+                "Commission"
+            ],
+            "Divers": [
+                "Dons",
+                "Cadeaux",
+                "Autres dépenses"
+            ]
+        }
+    }
+}
