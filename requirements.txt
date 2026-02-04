@@ -1,5 +1,3 @@
 pandas
-streamlit
 fastapi[standard]
 sqlalchemy[asyncio]
-requests
