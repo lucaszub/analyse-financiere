@@ -21,9 +21,22 @@ class BankCSVImporter:
         self.db = db
         self.account_id = account_id
 
-    def generate_import_id(self, row: pd.Series) -> str:
-        """Génère un ID unique pour éviter les doublons"""
-        unique_string = f"{row['dateOp']}_{row['amount']}_{row['label']}"
+    def _normalize_base_key(self, row: pd.Series) -> str:
+        """Construit la clé de base normalisée pour le hashing."""
+        label = str(row.get("label", "")).strip().lower()
+        label = " ".join(label.split())  # espaces multiples → un seul
+        date_str = str(row["dateOp"]).split(" ")[0] if pd.notna(row.get("dateOp")) else ""
+        amount_str = f"{float(row['amount']):.2f}"
+        return f"{self.account_id}_{date_str}_{amount_str}_{label}"
+
+    def generate_import_id(self, base_key: str, occurrence: int = 0) -> str:
+        """Génère un ID unique pour éviter les doublons.
+
+        Le hash inclut : account_id, date, montant normalisé, label normalisé,
+        et un compteur d'occurrence pour distinguer les transactions identiques
+        le même jour (ex: 2 cafés au même endroit).
+        """
+        unique_string = f"{base_key}_{occurrence}"
         return hashlib.md5(unique_string.encode()).hexdigest()
 
     def detect_transaction_type(self, amount: float) -> TransactionType:
@@ -144,6 +157,8 @@ class BankCSVImporter:
             error_details=[],
         )
 
+        occurrence_tracker: dict[str, int] = {}
+
         for idx, row in df.iterrows():
             try:
                 if pd.isna(row.get("amount")) or pd.isna(row.get("dateOp")):
@@ -151,7 +166,11 @@ class BankCSVImporter:
                     stats.error_details.append(f"Ligne {idx}: données manquantes")
                     continue
 
-                import_id = self.generate_import_id(row)
+                base_key = self._normalize_base_key(row)
+                occurrence = occurrence_tracker.get(base_key, 0)
+                occurrence_tracker[base_key] = occurrence + 1
+
+                import_id = self.generate_import_id(base_key, occurrence)
 
                 if transaction_exists(self.db, import_id):
                     stats.duplicates += 1
@@ -171,6 +190,8 @@ class BankCSVImporter:
                     else None
                 )
 
+                category_raw = row.get("category") if pd.notna(row.get("category")) else None
+
                 transaction = TransactionCreate(
                     account_id=self.account_id,
                     transaction_type=self.detect_transaction_type(row["amount"]),
@@ -178,7 +199,7 @@ class BankCSVImporter:
                     description=description,
                     date=row["dateOp"],
                     merchant=merchant,
-                    category_id=self.auto_categorize(description, merchant, row.get("category")),
+                    category_id=self.auto_categorize(description, merchant, category_raw),
                     category_parent_csv=category_parent_csv,
                     import_id=import_id,
                 )

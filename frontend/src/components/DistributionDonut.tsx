@@ -5,10 +5,11 @@ import { CATEGORY_COLORS } from '../constants/colors';
 
 interface Props {
   tree: CategoryTree;
-  totalExpenses: number;
+  total: number;
+  mode: 'depenses' | 'revenus';
 }
 
-export default function DistributionDonut({ tree, totalExpenses }: Props) {
+export default function DistributionDonut({ tree, total, mode }: Props) {
   const data = useMemo(() => {
     return Object.entries(tree)
       .map(([name, { total }]) => ({ name, value: Math.abs(total) }))
@@ -16,20 +17,29 @@ export default function DistributionDonut({ tree, totalExpenses }: Props) {
       .sort((a, b) => b.value - a.value);
   }, [tree]);
 
-  if (data.length === 0) return null;
+  if (data.length === 0) {
+    return (
+      <div className="bg-bg-card border border-border-card rounded-xl p-5">
+        <h3 className="text-sm font-medium text-text-secondary mb-2">Distribution</h3>
+        <div className="flex items-center justify-center h-48 text-text-secondary text-sm">
+          Aucune donnée
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-bg-card border border-border-card rounded-xl p-5">
       <h3 className="text-sm font-medium text-text-secondary mb-2">Distribution</h3>
       <div className="relative">
-        <ResponsiveContainer width="100%" height={280}>
+        <ResponsiveContainer width="100%" height={240}>
           <PieChart>
             <Pie
               data={data}
               cx="50%"
               cy="50%"
-              innerRadius={80}
-              outerRadius={120}
+              innerRadius={85}
+              outerRadius={105}
               paddingAngle={2}
               dataKey="value"
               strokeWidth={0}
@@ -53,9 +63,12 @@ export default function DistributionDonut({ tree, totalExpenses }: Props) {
         </ResponsiveContainer>
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <div className="text-center">
-            <p className="text-xs text-text-secondary mb-1">Somme sorties</p>
-            <p className="text-2xl font-bold text-text-primary">
-              -{totalExpenses.toLocaleString('fr-FR', { minimumFractionDigits: 2 })} €
+            <p className="text-xs text-text-secondary mb-1">
+              {mode === 'depenses' ? 'Somme sorties' : 'Somme entrées'}
+            </p>
+            <p className="text-xl font-bold text-text-primary">
+              {mode === 'depenses' ? '-' : '+'}
+              {total.toLocaleString('fr-FR', { minimumFractionDigits: 2 })} €
             </p>
           </div>
         </div>

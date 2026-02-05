@@ -5,6 +5,7 @@ import DistributionDonut from '../components/DistributionDonut';
 import CategoryAccordion from '../components/CategoryAccordion';
 import RecatModal from '../components/RecatModal';
 import { getTransactionsByRange, getCategories } from '../api/client';
+import type { ViewMode } from '../components/SummaryCards';
 import type { Transaction, Category, CategoryTree } from '../types';
 
 function startOfMonth(d: Date): string {
@@ -21,10 +22,10 @@ function isInternalTransfer(t: Transaction): boolean {
   return INTERNAL_FILTERS.includes(t.category_parent_csv || '');
 }
 
-function buildTree(transactions: Transaction[]): CategoryTree {
+function buildTree(transactions: Transaction[], type: 'debit' | 'credit'): CategoryTree {
   const tree: CategoryTree = {};
   transactions.forEach((t) => {
-    if (t.transaction_type === 'credit' || isInternalTransfer(t)) return;
+    if (t.transaction_type !== type || isInternalTransfer(t)) return;
     const parent = t.parent_category || 'Non catégorisé';
     const sub = t.sub_category || 'Non catégorisé';
     if (!tree[parent]) tree[parent] = { total: 0, subs: {} };
@@ -44,6 +45,7 @@ export default function Budget() {
   const [categories, setCategories] = useState<Category[]>([]);
   const [recatTxn, setRecatTxn] = useState<Transaction | null>(null);
   const [loading, setLoading] = useState(false);
+  const [viewMode, setViewMode] = useState<ViewMode>('depenses');
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -80,7 +82,8 @@ export default function Budget() {
     [filtered]
   );
 
-  const tree = useMemo(() => buildTree(transactions), [transactions]);
+  const expenseTree = useMemo(() => buildTree(transactions, 'debit'), [transactions]);
+  const incomeTree = useMemo(() => buildTree(transactions, 'credit'), [transactions]);
 
   const handleDateChange = (start: string, end: string) => {
     setStartDate(start);
@@ -102,46 +105,30 @@ export default function Budget() {
         </div>
       ) : (
         <>
+          <SummaryCards
+            income={income}
+            expenses={expenses}
+            mode={viewMode}
+            onModeChange={setViewMode}
+          />
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2 space-y-6">
-              <SummaryCards income={income} expenses={expenses} />
-
-              <div>
-                <p className="text-sm text-text-secondary mb-3">
-                  {Object.keys(tree).length} catégories de sorties
-                </p>
-                <CategoryAccordion tree={tree} onRecategorize={setRecatTxn} />
-              </div>
-
-              {filtered.filter((t) => t.transaction_type === 'credit').length > 0 && (
-                <div>
-                  <h3 className="text-sm font-medium text-text-secondary mb-3">Détail des entrées</h3>
-                  <div className="bg-bg-card border border-border-card rounded-xl divide-y divide-border-card">
-                    {filtered
-                      .filter((t) => t.transaction_type === 'credit')
-                      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-                      .map((txn) => (
-                        <div key={txn.id} className="flex items-center justify-between px-5 py-3">
-                          <div className="flex items-center gap-3">
-                            <span className="text-xs text-text-secondary w-20">
-                              {new Date(txn.date).toLocaleDateString('fr-FR')}
-                            </span>
-                            <span className="text-sm">{txn.description}</span>
-                          </div>
-                          <span className="text-sm font-medium text-green">
-                            +{Math.abs(txn.amount).toLocaleString('fr-FR', { minimumFractionDigits: 2 })} €
-                          </span>
-                        </div>
-                      ))}
-                  </div>
-                </div>
-              )}
+            <div className="lg:col-span-2">
+              <p className="text-sm text-text-secondary mb-3">
+                {Object.keys(viewMode === 'depenses' ? expenseTree : incomeTree).length} catégories de {viewMode === 'depenses' ? 'sorties' : 'revenus'}
+              </p>
+              <CategoryAccordion
+                tree={viewMode === 'depenses' ? expenseTree : incomeTree}
+                onRecategorize={setRecatTxn}
+              />
             </div>
 
-            <div className="lg:col-span-1">
-              <div className="sticky top-6">
-                <DistributionDonut tree={tree} totalExpenses={expenses} />
-              </div>
+            <div className="lg:col-span-1 lg:mt-8">
+              <DistributionDonut
+                tree={viewMode === 'depenses' ? expenseTree : incomeTree}
+                total={viewMode === 'depenses' ? expenses : income}
+                mode={viewMode}
+              />
             </div>
           </div>
         </>
